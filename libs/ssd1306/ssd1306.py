@@ -281,8 +281,8 @@ class ssd1306(object):
 		self.setColumnStartAddressForPageAddressingMode(col)
 
 	def setPageColumn(self, col, page):
-		assert col < 127, "Column is out of range."
-		assert page < 7, "Page is out of range."
+		assert col < 128, "Column is out of range."
+		assert page < 8, "Page is out of range."
 		self.setLocation(col, page * 8)
 
 	def __drawString8x8(self, string, inverse = False):
